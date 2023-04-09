@@ -474,7 +474,7 @@ void addNewValueToMemorySlice(unsigned char* memorySlice, size_t size, unsigned 
 bool findInstructions(SavedInstructions& si, ProcessHelper& ph, bool& memoryReadSucceeded)
 {
     unsigned char b = 0;
-    unsigned char memorySlice[16]{};
+    unsigned char memorySlice[16]{}; // set this to at least the size of the longest byte pattern
     
     // first value is the size
     // other values are positions and byte values
@@ -486,7 +486,7 @@ bool findInstructions(SavedInstructions& si, ProcessHelper& ph, bool& memoryRead
     unsigned char menuLoadMatch64[] = {7, 0, 0x4d, 2, 0xe1, 5, 0xfe};
     unsigned char mapLoadMatch64[] = {7, 0, 0xff, 3, 0x4c, 12, 0x4f};
     
-    // the instruction patterns should be behind the injection points
+    // the byte patterns should be behind the injection points
     unsigned char forwardOffsets[6] = {27, 82, 91, 29, 29, 54};
     unsigned char* matches[6] = {loadEndMatch32, menuLoadMatch32, mapLoadMatch32, loadEndMatch64, menuLoadMatch64, mapLoadMatch64};
     unsigned char copiedBytes[3][gameWriteSize]{}; // {loadEnd, menuLoad, mapLoad};
