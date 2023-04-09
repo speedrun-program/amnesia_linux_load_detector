@@ -486,6 +486,7 @@ bool findInstructions(SavedInstructions& si, ProcessHelper& ph, bool& memoryRead
     unsigned char menuLoadMatch64[] = {7, 0, 0x4d, 2, 0xe1, 5, 0xfe};
     unsigned char mapLoadMatch64[] = {7, 0, 0xff, 3, 0x4c, 12, 0x4f};
     
+    // the instruction patterns should be behind the injection points
     unsigned char forwardOffsets[6] = {27, 82, 91, 29, 29, 54};
     unsigned char* matches[6] = {loadEndMatch32, menuLoadMatch32, mapLoadMatch32, loadEndMatch64, menuLoadMatch64, mapLoadMatch64};
     unsigned char copiedBytes[3][gameWriteSize]{}; // {loadEnd, menuLoad, mapLoad};
