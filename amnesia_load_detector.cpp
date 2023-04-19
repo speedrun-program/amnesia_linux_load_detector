@@ -471,6 +471,7 @@ void addNewValueToMemorySlice(unsigned char* memorySlice, size_t size, unsigned 
 }
 
 // this is fast enough for the size of the game
+// if it needs to be faster, try making memorySlice a circular buffer
 bool findInstructions(SavedInstructions& si, ProcessHelper& ph, bool& memoryReadSucceeded)
 {
     unsigned char b = 0;
