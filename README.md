@@ -24,6 +24,6 @@ For example, with Amnesia_NOSTEAM.bin.x86_64:
 
 After Amnesia is running, start amnesia_load_detector.exe from terminal.
 
-    '/home/ubuntu/cpp_files/amnesia_injector2.exe'
+    '/home/ubuntu/cpp_files/amnesia_load_detector.exe'
 
-When a load screen is entered or left, a message should be printed.
+When a load starts or finishes, a message should be printed.
