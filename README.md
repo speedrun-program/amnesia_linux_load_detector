@@ -1,4 +1,6 @@
 
+Obsolete Linux Amnesia speedrunning tool.
+
 How to test this:
 
 Compile amnesia_load_detector.cpp as an executable file and extra_memory.cpp as a shared object file.
